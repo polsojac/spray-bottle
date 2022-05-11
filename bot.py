@@ -25,7 +25,8 @@ async def spray_bottle(ctx):
             await ctx.send("Carry on, sir. " + ctx.message.mentions[0].mention, file=File("david_exception.gif"))
         elif ctx.message.mentions[0].name == "tangent":
             await ctx.send("Carry on, sir. " + ctx.message.mentions[0].mention, file=File("tangent_exception.gif"))
-        
+        elif ctx.message.mentions[0].name == "mel":
+            await ctx.send("Momen has posted cringe. " + ctx.message.mentions[0].mention, file=File("mel_exception.gif"))
         else:
             await ctx.send("Stop posting cringe, " + ctx.message.mentions[0].mention + ".", file=File(random.choice(spray_bottle_gifs)))
 
