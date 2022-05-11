@@ -21,6 +21,9 @@ async def spray_bottle(ctx):
     else:
         if ctx.message.mentions[0].name == "Kuyashi":
             await ctx.send("You've probably posted something horny, " + ctx.message.mentions[0].mention + ".", file=File("kuyashi_exception.gif"))
+        else if ctx.message.mentions[0].name == "David":
+            await ctx.send("Carry on, sir. " + ctx.message.mentions[0].mention, file=File("david_exception.gif"))
+
         else:
             await ctx.send("Stop posting cringe, " + ctx.message.mentions[0].mention + ".", file=File(random.choice(spray_bottle_gifs)))
 
