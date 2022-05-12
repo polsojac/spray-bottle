@@ -22,21 +22,20 @@ async def spray_bottle(ctx):
         await ctx.send("Command message must contain one (1) user mention.")
     else:
         if ctx.message.mentions[0].name == "Kuyashi":
-            if (ctx.message.mentions[0].name in times_sprayed):
-                times_sprayed[ctx.message.mentions[0].name] += 1
-            else:
+            if (ctx.message.mentions[0].name not in times_sprayed):
                 times_sprayed[ctx.message.mentions[0].name] = 1
-            print(times_sprayed)
+            else:
+                times_sprayed[ctx.message.mentions[0].name] += 1
             await ctx.send("You've probably posted something horny, " + ctx.message.mentions[0].mention + "." + "You've now been sprayed " + times_sprayed[ctx.message.mentions[0].name] + " times.", file=File("kuyashi_exception.gif"))
         #elif ctx.message.mentions[0].name == "David":
         #    await ctx.send("Carry on, sir. " + ctx.message.mentions[0].mention, file=File("david_exception.gif"))
         #elif ctx.message.mentions[0].name == "tangent":
         #    await ctx.send("Carry on, sir. " + ctx.message.mentions[0].mention, file=File("tangent_exception.gif"))
         else:
-            if (ctx.message.mentions[0].name in times_sprayed):
-                times_sprayed[ctx.message.mentions[0].name] += 1
-            else:
+            if (ctx.message.mentions[0].name not in times_sprayed):
                 times_sprayed[ctx.message.mentions[0].name] = 1
+            else:
+                times_sprayed[ctx.message.mentions[0].name] += 1
             await ctx.send("Stop posting cringe, " + ctx.message.mentions[0].mention + "." + "You've now been sprayed " + times_sprayed[ctx.message.mentions[0].name] + " times.", file=File(random.choice(spray_bottle_gifs)))
 
 @bot.event
