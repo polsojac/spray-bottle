@@ -14,7 +14,7 @@ TOKEN = os.getenv('DISCORD_TOKEN')
 bot = commands.Bot(command_prefix='!')
 
 @bot.command(name='spray', help='Spray a user who is acting out of line')
-@commands.has_role('management')
+#@commands.has_role('management')
 async def spray_bottle(ctx):
     if len(ctx.message.mentions) != 1:
         await ctx.send("Command message must contain one (1) user mention.")
