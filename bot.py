@@ -22,7 +22,7 @@ async def spray_bottle(ctx):
         if ctx.message.mentions[0].name == "Kuyashi":
             await ctx.send("You've probably posted something horny, " + ctx.message.mentions[0].mention + ".", file=File("kuyashi_exception.gif"))
         elif ctx.message.mentions[0].name == "paradise":
-            await ctx.send(ctx.message.author.mention + "Have you lost your mind? You can't spray paradise", file=File("paradise_exception.gif"))
+            await ctx.send(ctx.message.author.mention + ", have you lost your mind? You can't spray paradise", file=File("paradise_exception.gif"))
         elif ctx.message.mentions[0].name == "tangent":
             await ctx.send("Carry on, sir. " + ctx.message.mentions[0].mention, file=File("tangent_exception.gif"))
         else:
