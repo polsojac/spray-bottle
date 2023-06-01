@@ -12,7 +12,7 @@ spray_bottle_gifs = ['spray_bottle1.gif', 'spray_bottle2.gif',
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 
-intents = discord.Intents.all()
+intents = discord.Intents.default()
 bot = commands.Bot(command_prefix='!', intents=intents)
 
 @bot.command(name='spray', help='Spray a user who is acting out of line')
